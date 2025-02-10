@@ -1,0 +1,19 @@
+light_ambient
+    rgb <1.0, 1.0, 1.0>
+end
+
+light_source
+    pos <-100, 125, 150>
+    rgb <1.0, 1.0, 1.0>
+end
+
+light_source
+    pos <0, 100, 100>
+    rgb <0.0, 0.5, 1.0>
+end
+
+light_source
+    pos <0, 100, 100>
+    rgb <1.0, 0.3, 0.8>
+end
+

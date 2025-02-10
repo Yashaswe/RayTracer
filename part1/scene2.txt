@@ -1,0 +1,75 @@
+camera
+    pos <0, 0, 80>                
+    view_size  100                 
+    samples    1000                
+    depth 3
+    look_at <0, 2, 1>
+    sky <1, 1, 0>
+end
+
+light_ambient
+    rgb <0.4, 0.4, 0.4>
+end
+
+light_source
+    pos <-100, 125, 150>
+    rgb <1.0, 0, 0>
+end
+
+light_source
+    pos <80, 15, 100>
+    rgb <0, 1, 0>
+end
+
+sphere
+    center <0, 0, 0>
+    radius 20
+
+    solid   rgb <1, 1.0, 0.0>
+
+    material
+        ambient  0.8
+        diffuse  1
+        specular 0.3  phong_size 20 
+        refraction 0.9 ior 1.33         // optional
+    end
+
+    bump_map bumpmapFile.ppm            // optional
+
+    mask maskFile.ppm                   // optional
+end
+
+cylinder
+    center <x, y, z>
+    size R h
+
+    rest is same as /sphere
+end
+      
+ellipsoid
+    center <x, y, z>
+    size Rx Ry Rz
+
+    rest is same as /sphere
+end
+
+cone
+    peak <x, y, z>
+    size Rx h Rz
+
+    rest is same as /sphere
+end
+
+hyperboloid
+    center <x, y, z>
+    size Rx Rz Ha Hb
+
+    rest is same as /sphere
+end
+
+plane
+    normal <a, b, c>
+    distance d
+
+    rest is same as /sphere
+end

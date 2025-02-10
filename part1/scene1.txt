@@ -1,0 +1,41 @@
+camera
+    pos <0, 0, 80>                
+    view_size  80                 
+    samples    400                
+    depth 3
+    look_at <0, 2, 1>
+    sky <1, 1, 0>
+end
+
+light_ambient
+    rgb <0.4, 0.4, 0.4>
+end
+
+light_source
+    pos <-100, 125, 150>
+    rgb <0, 0.2, 255>
+end
+
+light_source
+    pos <80, 105, 100>
+    rgb <0.8, 0.7, 0.7>
+end
+
+light_source
+    pos <80, -15, 30>
+    rgb <0.6, 0, 1.0>
+end
+
+sphere
+    center <10, 0, -20>
+    radius 30
+
+    solid   rgb <0.0, 1.0, 0.3>
+
+    material
+        ambient  0.8
+        diffuse  0.5
+        specular 0.8  phong_size 90 
+        refraction 0.9 ior 1.33  
+    end
+end
