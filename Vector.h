@@ -42,7 +42,7 @@ float dot(const Vector& v1, const Vector& v2);
 
 Vector operator+(const Vector& v1, const Vector& v2);
 Vector operator-(const Vector& v);
-Vector operator*(float scalar, Vector& v);
+Vector operator*(float scalar, const Vector& v);
 Vector operator/(const Vector& v, float scalar);
 
 Point operator+(const Point& p,  const Vector& v);

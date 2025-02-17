@@ -20,8 +20,6 @@ istream& operator>>(istream& is, Material& material){
     // refraction 0.8 ior 1.33         // optional
 
 	string type;
-	float refraction;
-	float ior;
 
 	is >> type;
 	is >> type;
@@ -33,9 +31,9 @@ istream& operator>>(istream& is, Material& material){
 	is >> type;
 	is >> material.n;
 	is >> type;
-	is >> refraction;
+	is >> material.kt;
 	is >> type;
-	is >> ior;
+	is >> material.ior;
 
 	return is;
 

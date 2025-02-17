@@ -9,7 +9,12 @@ int main()
 {
 	//test_geomtypes();
 
-	test_raytracer("part1", {"scene1", "scene2", "scene3", "scene4"});
+	//part1
+	//test_raytracer("part1", {"scene1", "scene2", "scene3", "scene4"});
+
+	//part2
+//	test_raytracer("part1", {"scene5", "scene6", "scene7"});
+	test_raytracer("part1", {"scene7", "scene8", "scene9", "scene10", "scene6", "scene11"});
     
 	return 0;
 }

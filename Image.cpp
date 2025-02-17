@@ -1,4 +1,5 @@
-#include "Canvas.h"
+#include "Image.h"
+
 #include "Color.h"
 
 #include <algorithm>
@@ -8,44 +9,45 @@
 #include <cassert>
 
 using uchar = unsigned char;
+using namespace std;
 
-
-void Canvas::setPixel(int w, int h, const Color& c) const
+void Image::setPixel(int w, int h, const Color& c) const
 {
 	image[h][w] = c;
 }
 
 
-Color Canvas::getPixel(int w, int h) const
+Color Image::getPixel(int w, int h) const
 {
 	return image[h][w];
 }
 
 
-Canvas::Canvas(int width, int height)
-  :
-  width(width),
-  height(height)
+
+Image::Image(int width, int height)
+:
+				  width(width),
+				  height(height)
 {
 	makeCanvas();
 	clear();
 }
 
 
-Canvas::~Canvas() 
+Image::~Image()
 {
 	destroyCanvas();
 }
 
 
-void Canvas::clear()
+void Image::clear()
 {
 	//set the whole canvas to black
 	fillRegion(0, 0, width, height, BLACK);
 }
 
 
-void Canvas::saveImage(const std::string& file_name) const
+void Image::saveImage(const std::string& file_name) const
 {
 	std::ofstream ofs(file_name.c_str(), std::ios::binary);
 
@@ -64,7 +66,7 @@ void Canvas::saveImage(const std::string& file_name) const
 }
 
 
-void Canvas::fillRegion(int w0, int h0, int width, int height, const Color& c) const
+void Image::fillRegion(int w0, int h0, int width, int height, const Color& c) const
 {
 	int w1 = w0 + width;
 	int h1 = h0 + height;
@@ -77,7 +79,7 @@ void Canvas::fillRegion(int w0, int h0, int width, int height, const Color& c) c
 }
 
 
-void Canvas::makeCanvas()
+void Image::makeCanvas()
 {
 	image = new Color*[height];
 	for(int h = 0; h < height; ++h) {
@@ -86,7 +88,7 @@ void Canvas::makeCanvas()
 }
 
 
-void Canvas::destroyCanvas() const
+void Image::destroyCanvas() const
 {
 	for(int h = 0; h < height; ++h) {
 		delete [] image[h];

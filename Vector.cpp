@@ -85,7 +85,7 @@ Vector Vector::operator*(float scalar) const{
 
 }
 
-Vector operator*(float scalar, Vector& v){
+Vector operator*(float scalar, const Vector& v){
 	float x = scalar*v.x();
 	float y = scalar*v.y();
 	float z = scalar*v.z();

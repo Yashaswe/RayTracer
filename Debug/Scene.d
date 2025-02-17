@@ -1,6 +1,7 @@
 Scene.o: ../Scene.cpp ../Scene.h ../Camera.h ../Point.h ../Light.h \
   ../Color.h ../Sphere.h ../Vector.h ../Ray.h ../Material.h ../Hit.h \
-  ../Canvas.h ../Unit.h
+  ../Shape.h ../Cylinder.h ../Hyperboloid.h ../Cone.h ../Unit.h \
+  ../Image.h
 
 ../Scene.h:
 
@@ -22,6 +23,14 @@ Scene.o: ../Scene.cpp ../Scene.h ../Camera.h ../Point.h ../Light.h \
 
 ../Hit.h:
 
-../Canvas.h:
+../Shape.h:
+
+../Cylinder.h:
+
+../Hyperboloid.h:
+
+../Cone.h:
 
 ../Unit.h:
+
+../Image.h:

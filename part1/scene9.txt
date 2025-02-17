@@ -1,0 +1,90 @@
+camera
+    pos <0, 0, 400>                
+    view_size  100                 
+    samples    500                
+    depth 4
+    look_at <0, 2, 1>
+    sky <1, 1, 0>
+end
+
+light_ambient
+    rgb <0.4, 0.4, 0.4>
+end
+
+light_source
+    pos <-100, 125, 150>
+    rgb <1.0, 1.0, 1.0>
+end
+
+light_source
+    pos <10, 25, 10>
+    rgb <0, 1.0, 1.0>
+end
+
+cylinder
+    center <30, -5, -30>
+    size 10 30
+
+    solid   rgb <0.0, 1.0, 0.0>
+
+    material
+        ambient  0.4
+        diffuse  0.5
+        specular 0.4  phong_size 90 
+        refraction 0.9 ior 1.33        
+    end
+end
+
+
+
+cone
+    peak <0, 50, 0>
+    size 5 30 8
+
+     solid   rgb <1.0, 0.0, 0.0>
+
+    
+    material
+        ambient  0.8
+        diffuse  0.5
+        specular 0.4  phong_size 90 
+        refraction 0.9 ior 1.33      
+    end
+
+end
+
+
+sphere
+    center <-50, 0, -20>
+    radius 35
+
+    solid   rgb <0.0, 0.0, 1.0>
+
+    
+    material
+        ambient  0.3
+        diffuse  0.5
+        specular 0.4  phong_size 90 
+        refraction 0.9 ior 1.33      
+    end
+
+    bump_map bumpmapFile.ppm           
+
+    mask maskFile.ppm               
+end
+
+hyperboloid
+    center <30, 0, 0>
+    size 5 10 15 20
+   
+    solid   rgb <1.0, 1.0, 1.0>
+
+    
+     material
+        ambient  0.3
+        diffuse  0.5
+        specular 0.4  phong_size 90 
+        refraction 0.9 ior 1.33      
+    end
+
+end

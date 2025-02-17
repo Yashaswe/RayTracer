@@ -16,20 +16,22 @@
 #include "Ray.h"
 #include "Material.h"
 #include "Hit.h"
+#include "Shape.h"
 
 using namespace std;
 
-class Sphere{
+class Sphere: public Shape{
 private:
+	float radius;
 public:
 
-	Point center;
-	Material material;
-	float radius;
-	Color color;
-	optional<Hit> intersect(const Ray& ray) const;
+
 	friend ostream& operator<<(ostream& os, const Sphere& sphere);
 	friend istream& operator>>(istream& is, Sphere& sphere);
+
+
+	optional<Hit> intersect(const Ray& ray) const override;
+	optional<Hit> getHit(float t, const Ray& ray) const override;
 };
 
 

@@ -32,14 +32,16 @@ int main()
 
 */
 
-#ifndef CANVAS_H_
-#define CANVAS_H_
+#ifndef IMAGE_H_
+#define IMAGE_H_
 
 #include "Color.h"
 
 #include <string>
 
-class Canvas
+using namespace std;
+
+class Image
 {
 public:
 	/**
@@ -47,12 +49,14 @@ public:
 	 *     x in [0, w-1]
 	 *     y in [0, h-1]
 	 */
-	Canvas(int w, int h);
+	Image(int w, int h);
 
 	/**
 	 * Frees the storage used for various buffers.
 	 */
-	~Canvas();
+	~Image();
+
+//	Image(const string& file_name);
 
 	/**
 	 * Returns the color of the pixel with the given coordinates (x, y).

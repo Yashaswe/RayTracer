@@ -27,7 +27,7 @@ Vector Ray::dir() const{
 	return d_;
 }
 
-Point Ray::point(float t){
+Point Ray::point(float t) const{
 	Point result = p_ + t * d_;
 	return result;
 }

@@ -16,6 +16,7 @@ struct Camera{
 	Point pos;
 	float view_size;
 	int samples;
+	int depth;
 
 	friend ostream& operator<<(ostream& os, const Camera& camera);
 	friend istream& operator>>(istream& is, Camera& camera);

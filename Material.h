@@ -12,7 +12,7 @@
 using namespace std;
 
 struct Material{
-	float ka, kd, ks, n;
+	float ka, kd, ks, kt, n, ior;
 
 	friend ostream& operator<<(ostream& os, const Material& material);
 	friend istream& operator>>(istream& is, Material& material);

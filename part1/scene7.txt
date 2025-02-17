@@ -1,0 +1,65 @@
+camera
+    pos <0, 0, 80>                
+    view_size  60                 
+    samples    300                
+    depth 4
+    look_at <0, 2, 1>
+    sky <1, 1, 0>
+end
+
+light_ambient
+    rgb <0.4, 0.4, 0.4>
+end
+
+light_source
+    pos <-100, 125, 150>
+    rgb <1.0, 1.0, 1.0>
+end
+
+
+
+cylinder
+    center <0, 0, 0>
+    size 10 30
+
+    solid   rgb <0.0, 0.3, 1.0>
+
+    material
+        ambient  0.4
+        diffuse  0.5
+        specular 0.8  phong_size 90 
+        refraction 0.9 ior 1.33        
+    end
+end
+      
+ellipsoid
+    center <x, y, z>
+    size Rx Ry Rz
+
+end
+
+cone
+    peak <x, y, z>
+    size Rx h Rz
+
+
+end
+
+hyperboloid
+    center <x, y, z>
+    size Rx Rz Ha Hb
+    solid   rgb <0.0, 1.0, 0.0>
+
+    material
+        ambient  0.4
+        diffuse  0.5
+        specular 0.8  phong_size 90 
+        ref
+
+end
+
+plane
+    normal <a, b, c>
+    distance d
+
+end

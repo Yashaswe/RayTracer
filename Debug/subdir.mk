@@ -5,13 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Camera.cpp \
-../Canvas.cpp \
 ../Color.cpp \
+../Cone.cpp \
+../Cylinder.cpp \
+../Hyperboloid.cpp \
+../Image.cpp \
 ../Light.cpp \
 ../Material.cpp \
 ../Point.cpp \
 ../Ray.cpp \
 ../Scene.cpp \
+../Shape.cpp \
 ../Sphere.cpp \
 ../Unit.cpp \
 ../Vector.cpp \
@@ -22,13 +26,17 @@ CPP_SRCS += \
 
 CPP_DEPS += \
 ./Camera.d \
-./Canvas.d \
 ./Color.d \
+./Cone.d \
+./Cylinder.d \
+./Hyperboloid.d \
+./Image.d \
 ./Light.d \
 ./Material.d \
 ./Point.d \
 ./Ray.d \
 ./Scene.d \
+./Shape.d \
 ./Sphere.d \
 ./Unit.d \
 ./Vector.d \
@@ -39,13 +47,17 @@ CPP_DEPS += \
 
 OBJS += \
 ./Camera.o \
-./Canvas.o \
 ./Color.o \
+./Cone.o \
+./Cylinder.o \
+./Hyperboloid.o \
+./Image.o \
 ./Light.o \
 ./Material.o \
 ./Point.o \
 ./Ray.o \
 ./Scene.o \
+./Shape.o \
 ./Sphere.o \
 ./Unit.o \
 ./Vector.o \
@@ -67,7 +79,7 @@ OBJS += \
 clean: clean--2e-
 
 clean--2e-:
-	-$(RM) ./Camera.d ./Camera.o ./Canvas.d ./Canvas.o ./Color.d ./Color.o ./Light.d ./Light.o ./Material.d ./Material.o ./Point.d ./Point.o ./Ray.d ./Ray.o ./Scene.d ./Scene.o ./Sphere.d ./Sphere.o ./Unit.d ./Unit.o ./Vector.d ./Vector.o ./main.d ./main.o ./test_geomtypes.d ./test_geomtypes.o ./test_raytracer.d ./test_raytracer.o ./utils.d ./utils.o
+	-$(RM) ./Camera.d ./Camera.o ./Color.d ./Color.o ./Cone.d ./Cone.o ./Cylinder.d ./Cylinder.o ./Hyperboloid.d ./Hyperboloid.o ./Image.d ./Image.o ./Light.d ./Light.o ./Material.d ./Material.o ./Point.d ./Point.o ./Ray.d ./Ray.o ./Scene.d ./Scene.o ./Shape.d ./Shape.o ./Sphere.d ./Sphere.o ./Unit.d ./Unit.o ./Vector.d ./Vector.o ./main.d ./main.o ./test_geomtypes.d ./test_geomtypes.o ./test_raytracer.d ./test_raytracer.o ./utils.d ./utils.o
 
 .PHONY: clean--2e-
 

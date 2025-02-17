@@ -1,0 +1,62 @@
+camera
+    pos <0, 0, 80>                
+    view_size  100                 
+    samples    1000                
+    depth 3
+    look_at <0, 2, 1>
+    sky <1, 1, 0>
+end
+
+light_ambient
+    rgb <0.4, 0.4, 0.4>
+end
+
+light_source
+    pos <-100, 125, 150>
+    rgb <1.0, 0, 0>
+end
+
+light_source
+    pos <80, 15, 100>
+    rgb <0, 1, 0>
+end
+
+
+sphere
+    center <0, 30, 0>
+    radius 20
+
+    solid   rgb <1, 1.0, 0.0>
+
+    material
+        ambient  0.8
+        diffuse  0.8
+        specular 0.9  phong_size 20 
+        refraction 0.9 ior 1.33         // optional
+    end
+
+    bump_map bumpmapFile.ppm            // optional
+
+    mask maskFile.ppm                   // optional
+end
+
+
+sphere
+    center <20, 0, 30>
+    radius 15
+
+    solid   rgb <1, 1.0, 0.0>
+
+    material
+        ambient  0.8
+        diffuse  0.7
+        specular 0.5  phong_size 20 
+        refraction 0.9 ior 1.33         // optional
+    end
+
+    bump_map bumpmapFile.ppm            // optional
+
+    mask maskFile.ppm                   // optional
+end
+
+

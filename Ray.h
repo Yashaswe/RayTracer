@@ -25,7 +25,7 @@ public:
 	Point origin() const;
 	Vector dir() const;
 
-	Point point(float t);
+	Point point(float t) const;
 
 
 

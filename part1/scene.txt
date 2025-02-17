@@ -25,7 +25,7 @@ sphere
     material
         ambient  0.2
         diffuse  0.5
-        specular 0.8  phong_size 90 
+        specular 0  phong_size 90 
         refraction 0.9 ior 1.33         // optional
     end
 

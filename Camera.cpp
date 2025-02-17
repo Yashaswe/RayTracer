@@ -23,7 +23,7 @@ istream& operator>>(istream& is, Camera& camera){
 	is >> type;
 	is >> camera.samples;
 	is >> type;
-	is >> num >> type >> point >> type >> point;
+	is >> camera.depth >> type >> point >> type >> point;
 	return is;
 
 }
